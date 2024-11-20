@@ -34,4 +34,3 @@ if __name__ == "__main__":
 
     search_element = int(input("Введите число для поиска: "))
     binary_search(search_element, sorted_arr)
-
