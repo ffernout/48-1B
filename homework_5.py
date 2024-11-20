@@ -1,4 +1,5 @@
 import random
+from decouple import config
 secret_number = random.randint(1, 50)
 guesses_made = 5
 
@@ -7,7 +8,7 @@ print("Игра попробуй угадать число! Я загадыва�
 while True:
     assumption = int(input("Введите ваше предполагаемое число. От 1 до 50: "))
 
-    guesses_made -= 1
+    guesses_made += 1
 
     if assumption < secret_number:
         print("Загаданное число больше.")
@@ -17,4 +18,3 @@ while True:
         print(f"Вы угадали число: {secret_number}!")
         print(f"Число попыток: {guesses_made}")
         break
-
